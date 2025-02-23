@@ -269,7 +269,7 @@ export default function Team() {
         {renderTeamSection("Co-Conveners", team.conveners, true)}
 
         {/* Other Teams - Initially hidden */}
-        {showAllTeam && (
+        {/* {showAllTeam && (
           <>
             {renderTeamSection("PR & Social Media Team", team.pr)}
             {renderTeamSection("Design & Documentation Team", team.design)}
@@ -278,17 +278,17 @@ export default function Team() {
             {renderTeamSection("Event Coordinators", team.coordinators)}
             {renderTeamSection("Event Organizers", team.organizers)}
           </>
-        )}
+        )} */}
 
         {/* View More Button */}
-        <div className="text-center mt-8">
+        {/* <div className="text-center mt-8">
           <button
             onClick={() => setShowAllTeam(!showAllTeam)}
             className="button-primary"
           >
             {showAllTeam ? 'Show Less' : 'View Complete Team'}
           </button>
-        </div>
+        </div> */}
       </motion.div>
     </section>
   );

@@ -17,18 +17,20 @@ export default function Events() {
           {eventsData.map((event) => (
             <motion.div
               key={event.id}
-              className="bg-dark/50 backdrop-blur-sm rounded-lg p-6 card-hover"
+              className="bg-dark/50 backdrop-blur-sm rounded-lg p-6 card-hover flex flex-col items-center"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >
               <h3 className="text-xl font-bold mb-3 text-primary">{event.name}</h3>
               <p className="text-gray-300 mb-4">{event.shortDescription}</p>
-              <Link
-                to={`/event/${event.id}`}
-                className="button-primary inline-block text-sm"
-              >
-                View Details
-              </Link>
+              <div className="flex justify-center w-full">
+                <Link
+                  to={`/event/${event.id}`}
+                  className="button-primary inline-block text-sm"
+                >
+                  View Details
+                </Link>
+              </div>
             </motion.div>
           ))}
         </div>
